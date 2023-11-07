@@ -7,8 +7,6 @@ Simply provide a dialed number and a user to see what Voice Routes would be used
 
 > Make Sure you have **v4.9.3+** Microsoft Teams PowerShell module installed.
 > 
-> 
-```.\Test-CSOnlineUserVoiceRouting.ps1 -DialedNumber +61420123456 -User user@domain.com```
     
     .\Test-CSOnlineUserVoiceRouting.ps1 -DialedNumber 0420123456 -User user@domain.com
     This will list any Voice Routes (in priority order) for user@domain.com calling 0420123456
