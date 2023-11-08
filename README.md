@@ -3,6 +3,8 @@
 Using this script you can test a user's assigned Online Voice Routing Policy - this policy is used to decide how to route Direct Routing calls. 
 Simply provide a dialed number and a user to see what Voice Routes would be used and in what order.
 
+![](https://testit.vc/wp-content/uploads/2023/11/MSTeamsVoiceTester.png)
+
 ## Usage
 
 > Make Sure you have **v4.9.3+** Microsoft Teams PowerShell module installed.
