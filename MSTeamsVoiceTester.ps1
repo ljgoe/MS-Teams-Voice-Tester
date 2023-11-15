@@ -148,9 +148,20 @@ if ($UserReturned) {
             Write-Host "`rFound $(@($MatchedVoiceRoutes).Count) Voice Route(s) with matching pattern in PSTN Usage '$ChosenPSTNUsage', listing in priority order..." -ForegroundColor Green
 
             $MatchedVoiceRoutes | Select-Object Name, NumberPattern, PSTNUsage, OnlinePstnGatewayList, Priority | Format-Table
+ 
+ Write-Host "`n----------------------------------------------------------------------------------------------
+            `n 
 
-            Write-Host "Note: Once a Voice Route that matches is found in a PSTN Usage, all other Voice Routes in other PSTN Usages will be ignored." -ForegroundColor Yellow
+            A successful call placed to `r$DialedNumber 
+            
+            would be translated to $($NormalisedResult.TranslatedNumber) 
+            
+            and then routed to the gateway $($MatchedVoiceRoutes.OnlinePstnGatewayList)
 
+            `n----------------------------------------------------------------------------------------------" -ForegroundColor green
+
+            Write-Host "`nNote: Once a Voice Route that matches is found in a PSTN Usage, all other Voice Routes in other PSTN Usages will be ignored." -ForegroundColor Yellow
+         
         }
         else {
 
