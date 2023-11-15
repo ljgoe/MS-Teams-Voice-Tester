@@ -1,3 +1,12 @@
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://testit.vc/">
+    <img src="https://testit.vc/wp-content/uploads/2023/11/logo.png" alt="Logo" width="80" height="80">
+  </a>
+  <h3 align="center">Microsoft Teams Voice Tester</h3>
+</div>
+
 # Test a user's Online Voice Routing Policy for Microsoft Teams Direct Routing
 
 Using this script you can test a user's assigned Online Voice Routing Policy - this policy is used to decide how to route Direct Routing calls. 
