@@ -1,4 +1,12 @@
 <#
+--------------
+Version: V1.0   
+Date: Dec 2023
+--------------
+
+Version	Date	Author	Rationale
+0.1	1 March 2017	Nanette Bailey	First draft
+
 Test a user's Online Voice Routing Policy for Teams Direct Routing
  
     Using this script you can test a user's assigned Online Voice Routing Policy - this policy is used to decide how to route Direct Routing calls. 
