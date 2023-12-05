@@ -23,6 +23,12 @@ Test a user's Online Voice Routing Policy for Teams Direct Routing
     AU-Mobile ^\+61([45]\d{8})$ AU-Mobile {SBC.domain.com}        2
 
 #>
+# START #
+# Connect to MS teams
+
+connect-MicrosoftTeams
+
+# Start of Script #
 
 param(
 
