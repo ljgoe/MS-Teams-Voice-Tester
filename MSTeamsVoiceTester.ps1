@@ -24,6 +24,24 @@ connect-MicrosoftTeams
     ----      -------------     --------- --------------------- --------
     AU-Mobile ^\+61([45]\d{8})$ AU-Mobile {SBC.domain.com}        2
 
+If you get errors or have not assigned a policy to a user follow the steps below
+
+## Enable your user
+
+# Ensure that the user is homed online
+Get-CsOnlineUser -Identity user@lab.testit.vc | fl 
+Get-CsOnlineUser -Identity user@lab.testit.vc
+
+# Configure the users phone number and enable enterprise voice (licence required). Note: Change the number below to suit
+Set-CsPhoneNumberAssignment -Identity "user@lab.testit.vc" -EnterpriseVoiceEnabled $true 
+Set-CsPhoneNumberAssignment -Identity "user@lab.testit.vc" -PhoneNumber "+61712345001" -PhoneNumberType DirectRouting
+
+# Assign the voice routing policy (which determines where they are allowed to call) and the dialplan (Which determines which location they are in e.g Queensland) to a user
+Grant-CsOnlineVoiceRoutingPolicy -Identity "user@lab.testit.vc" -PolicyName "AU-International"
+Grant-CsTenantDialPlan -Identity "user@lab.testit.vc" -PolicyName "AU-Queensland"
+
+Get-CsOnlineUser -Identity user@lab.testit.vc
+
 #>
 
 
