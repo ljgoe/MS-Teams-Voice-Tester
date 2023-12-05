@@ -87,13 +87,12 @@ function Test-TeamsConnection {
 }
 
 # Start
-Write-Host "`n----------------------------------------------------------------------------------------------
-            `n 
+Write-Host "`n-----------------------------------------------------
             Suppled values:
 
             User: $user
             DialedNumber: $DialedNumber
-            `n----------------------------------------------------------------------------------------------" -ForegroundColor Yellow
+            `n-----------------------------------------------------" -ForegroundColor Yellow
 
 Write-Host "`nChecking voice routing of dialed number $DialedNumber for $user" -ForegroundColor Yellow
 
@@ -175,8 +174,7 @@ if ($UserReturned) {
 
             $MatchedVoiceRoutes | Select-Object Name, NumberPattern, PSTNUsage, OnlinePstnGatewayList, Priority | Format-Table
  
- Write-Host "`n----------------------------------------------------------------------------------------------
-            `n 
+ Write-Host "`n---------------------------------------------------------------------------------
 
             A successful call placed to `r$DialedNumber 
             
@@ -184,7 +182,7 @@ if ($UserReturned) {
             
             and then routed to the gateway $($MatchedVoiceRoutes.OnlinePstnGatewayList)
 
-            `n----------------------------------------------------------------------------------------------" -ForegroundColor green
+            `n----------------------------------------------------------------------------------" -ForegroundColor green
 
             Write-Host "`nNote: Once a Voice Route that matches is found in a PSTN Usage, all other Voice Routes in other PSTN Usages will be ignored." -ForegroundColor Yellow
          
