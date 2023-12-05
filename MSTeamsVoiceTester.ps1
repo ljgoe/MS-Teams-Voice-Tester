@@ -1,10 +1,12 @@
 <#
+Test a user's Online Voice Routing Policy for Teams Direct Routing
 --------------
 Version: V1.0   
 Date: Dec 2023
 --------------
 
-Test a user's Online Voice Routing Policy for Teams Direct Routing
+# Connect to MS teams before running script
+connect-MicrosoftTeams
  
     Using this script you can test a user's assigned Online Voice Routing Policy - this policy is used to decide how to route Direct Routing calls. 
     Simply provide a dialed number and a user to see what Voice Routes would be used.
@@ -23,12 +25,7 @@ Test a user's Online Voice Routing Policy for Teams Direct Routing
     AU-Mobile ^\+61([45]\d{8})$ AU-Mobile {SBC.domain.com}        2
 
 #>
-# START #
-# Connect to MS teams
 
-connect-MicrosoftTeams
-
-# Start of Script #
 
 param(
 
